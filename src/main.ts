@@ -1,10 +1,10 @@
-import * as w4 from "../lib/wasm4";
-import { InputHandler } from "../lib/w4lib/gamepad"
+import * as w4 from "./lib/wasm4";
+import { InputHandler } from "./lib/w4lib/gamepad"
 
 // i modified the starter template a bit.
 
 let rectX: i8
-let rectY: i8
+let rectY: i8s
 
 let input: InputHandler
 
