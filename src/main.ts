@@ -1,4 +1,4 @@
-import * as w4 from "./wasm4";
+import * as w4 from "./wasm4lib/wasm4";
 
 // i modified the starter template a bit.
 
