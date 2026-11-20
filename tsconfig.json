@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": null,
     "downlevelIteration": null,
-    "strictBindCallApply": false // make intellisense behave
+    "strictBindCallApply": false
   },
   "include": [
     "./src/**/*.ts"

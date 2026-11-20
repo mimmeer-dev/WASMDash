@@ -1,6 +1,6 @@
 // some code from wasm4.ts to made this work on it's own
 // well just joking
-import * as w4 from "./wasm4"
+import * as w4 from "../wasm4"
 
 // Memory Addreses
 const gamePadAddresses: usize[] = [

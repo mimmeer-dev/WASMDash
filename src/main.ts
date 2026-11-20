@@ -1,5 +1,5 @@
-import * as w4 from "./wasm4lib/wasm4";
-import { InputHandler } from "./wasm4lib/gamepad"
+import * as w4 from "../lib/wasm4";
+import { InputHandler } from "../lib/w4lib/gamepad"
 
 // i modified the starter template a bit.
 
@@ -15,12 +15,5 @@ export function start(): void {
 }
 
 export function update (): void {
-    if (input.buttonHeld(w4.BUTTON_DOWN)) {
-        rectY+=1;
-        w4.trace("button wanted")
-    }
-    else {
-        w4.trace("fail")
-    }
     w4.rect(rectX, rectY, 32, 32);
 }
