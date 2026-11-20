@@ -17,6 +17,13 @@ export function start(): void {
 export function update (): void {
     if (input.buttonHeld(w4.BUTTON_DOWN)) {
         rectY+=1;
+    } else if (input.buttonHeld(w4.BUTTON_UP)) {
+        rectY-=1
+    }
+    if (input.buttonHeld(w4.BUTTON_LEFT)) {
+        rectX-=1;
+    } else if (input.buttonHeld(w4.BUTTON_RIGHT)) {
+        rectX+=1
     }
     w4.rect(rectX, rectY, 32, 32);
 }
