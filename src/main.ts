@@ -4,7 +4,7 @@ import { InputHandler } from "./lib/w4lib/gamepad"
 // i modified the starter template a bit.
 
 let rectX: i8
-let rectY: i8s
+let rectY: i8
 
 let input: InputHandler
 
