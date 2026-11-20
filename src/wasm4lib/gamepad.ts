@@ -4,13 +4,13 @@ import * as w4 from "./wasm4"
 
 // Memory Addreses
 const gamePadAddresses: usize[] = [
-    0x16,
-    0x17,
-    0x18,
-    0x19
+    w4.GAMEPAD1,
+    w4.GAMEPAD2,
+    w4.GAMEPAD3,
+    w4.GAMEPAD4
 ]
 
-class InputHandler {
+export class InputHandler {
     public gamePadAddress: usize;
     private gamePadValue: u8;
 
@@ -20,14 +20,14 @@ class InputHandler {
         this.gamePadValue = 0
     }
 
-    updateGamepadAssignment(gamepad: u8=0)
+    updateGamepadAssignment(gamepad: u8=0): void
     {
         this.gamePadAddress = gamePadAddresses[gamepad];
     }
 
-    buttonPressed(button: u8=w4.BUTTON_1): bool
+    buttonHeld(button: u8=w4.BUTTON_1): bool
     {
         this.gamePadValue = load<u8>(this.gamePadAddress);
-        return this.gamePadValue & button
+        return (this.gamePadValue & button) != 0
     }
 }
