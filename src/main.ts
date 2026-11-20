@@ -15,5 +15,8 @@ export function start(): void {
 }
 
 export function update (): void {
+    if (input.buttonHeld(w4.BUTTON_DOWN)) {
+        rectY+=1;
+    }
     w4.rect(rectX, rectY, 32, 32);
 }
